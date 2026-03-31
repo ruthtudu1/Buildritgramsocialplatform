@@ -1,0 +1,47 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Ritgram Design Tokens */
+:root {
+  --rg-bg: #ffffff;
+  --rg-card: #ffffff;
+  --rg-surface: #f3f4f6;
+  --rg-border: rgba(0, 0, 0, 0.08);
+  --rg-text: #0f0f14;
+  --rg-text-muted: #6b7280;
+  --sidebar-bg: #fafafa;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  --rg-bg: #09090f;
+  --rg-card: #111118;
+  --rg-surface: #1a1a25;
+  --rg-border: rgba(255, 255, 255, 0.08);
+  --rg-text: #f0f0f8;
+  --rg-text-muted: #8888a0;
+  --sidebar-bg: #0e0e16;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
