@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { useNavigate } from 'react-router';
 import { TrendingUp, Hash, Users, Image, BadgeCheck, Search } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -151,7 +151,7 @@ export function ExplorePage() {
                   <div className="flex items-end justify-between -mt-7">
                     <img src={user.avatar} alt={user.name}
                       className="w-14 h-14 rounded-full object-cover ring-2"
-                      style={{ borderColor: 'var(--rg-surface)', ringColor: 'var(--rg-bg)' }}
+                      style={{ '--tw-ring-color': 'var(--rg-surface)', '--tw-ring-offset-color': 'var(--rg-bg)' } as CSSProperties}
                       onClick={() => navigate(`/profile/${user.username}`)} />
                     <button
                       onClick={() => toggleFollow(user.id)}

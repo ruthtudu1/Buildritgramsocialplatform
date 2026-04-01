@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, type CSSProperties } from 'react';
 import { useNavigate } from 'react-router';
 import {
   ArrowLeft, User, Lock, Bell, Shield, Trash2,
@@ -186,7 +186,7 @@ export function SettingsPage() {
                   }}>
                     <img src={profile.avatar} alt="Avatar"
                       className="w-20 h-20 rounded-full object-cover ring-4"
-                      style={{ ringColor: 'var(--rg-bg)' }} />
+                      style={{ '--tw-ring-color': 'var(--rg-bg)' } as CSSProperties} />
                     <div className="absolute inset-0 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all"
                       style={{ background: 'rgba(0,0,0,0.5)' }}>
                       <Camera size={16} className="text-white" />

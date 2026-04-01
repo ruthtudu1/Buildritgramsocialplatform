@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { ArrowLeft, MapPin, Globe, Calendar, BadgeCheck, MoreHorizontal, MessageCircle, Bell } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -69,8 +69,8 @@ export function ProfilePage() {
         <div className="flex items-end justify-between -mt-12 mb-3">
           <div className="relative">
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden ring-4"
-              style={{ ringColor: 'var(--rg-bg)', background: 'var(--rg-surface)' }}>
-              <img src={user.avatar} alt={user.name} className="w-full h-full object-cover" style={{ ringColor: 'var(--rg-bg)' }} />
+              style={{ '--tw-ring-color': 'var(--rg-bg)', background: 'var(--rg-surface)' } as CSSProperties}>
+              <img src={user.avatar} alt={user.name} className="w-full h-full object-cover" />
             </div>
             {user.isVerified && (
               <div className="absolute bottom-1 right-1 w-6 h-6 rounded-full flex items-center justify-center"

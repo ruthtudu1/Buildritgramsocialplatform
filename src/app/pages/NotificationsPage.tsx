@@ -28,7 +28,7 @@ export function NotificationsPage() {
   useEffect(() => {
     const timer = setTimeout(() => markNotificationsRead(), 2000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [markNotificationsRead]);
 
   const unread = notifications.filter(n => !n.isRead);
   const read = notifications.filter(n => n.isRead);

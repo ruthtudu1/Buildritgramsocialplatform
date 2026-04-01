@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { useAuth } from '../../context/AuthContext';
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { CreateRitModal } from '../rit/CreateRitModal';
 
 interface NavItem {
@@ -148,7 +148,7 @@ export function Sidebar() {
           <div className="flex items-center gap-3">
             <img src={user?.avatar} alt={user?.name}
               className="w-9 h-9 rounded-full object-cover ring-2"
-              style={{ ringColor: '#8B5CF6' }}
+              style={{ '--tw-ring-color': '#8B5CF6' } as CSSProperties}
             />
             <div className="flex-1 min-w-0">
               <p className="text-sm truncate" style={{ fontWeight: 600, color: 'var(--rg-text)' }}>
